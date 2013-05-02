@@ -30,7 +30,7 @@ module.exports = function updateModule(req, res, next) {
                 if (verifier.digest('hex') === md5) {
                     fs.rename(pkgFile + '.tmp', pkgFile, callback);
                 } else {
-                    callback('error');
+                    callback('md5 error');
                 }
             });
         },
@@ -107,6 +107,10 @@ module.exports = function updateModule(req, res, next) {
         }
 
     ], function (error) {
-        console.log(error);
+        res.writeHead(500);
+        res.end(JSON.stringify({
+            message : error,
+            status : 'error'
+        }));
     });
 };

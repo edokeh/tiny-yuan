@@ -3,7 +3,7 @@ var connectRoute = require('connect-route');
 var WriteStream = require('fs').WriteStream;
 var action = require('./action');
 
-var server = connect.createServer(
+var app = connect.createServer(
     connect.logger('dev'),
     connect.static('public'),
     connect.bodyParser(),
@@ -24,5 +24,13 @@ var server = connect.createServer(
         router.put('/repository/:family/:name/:version/', action.updateModule);
 
         router.post('/account/login', action.login);
-    })
-).listen(3000);
+    }),
+
+    connect.errorHandler()
+);
+
+if (!module.parent) {
+    app.listen(3000);
+}
+
+module.exports = app;
