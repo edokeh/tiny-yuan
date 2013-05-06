@@ -1,6 +1,5 @@
 var connect = require('connect');
 var connectRoute = require('connect-route');
-var WriteStream = require('fs').WriteStream;
 var action = require('./action');
 
 var app = connect.createServer(
