@@ -9,7 +9,7 @@
 代码 clone 下来后，进入目录下执行
 
     $ npm install
-    $ node .
+    $ node cluster.js
 
 这样一个 Spm 源服务就启动了，地址为 http://localhost:3000
 
