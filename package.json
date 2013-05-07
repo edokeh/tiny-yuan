@@ -1,6 +1,6 @@
 {
     "name" : "tiny-yuan",
-    "version" : "0.0.1",
+    "version" : "0.0.2",
     "description" : "Simple SpmJS Source",
     "keywords" : [
         "seajs",
@@ -9,12 +9,14 @@
         "package",
         "source"
     ],
+    "main": "./cluster",
     "dependencies" : {
         "connect" : "~2.7.6",
         "connect-route" : "~0.1.3",
         "mkdirp" : "~0.3.5",
         "semver" : "~1.1.4",
         "async" : "~0.2.7",
-        "underscore" : "~1.4.4"
+        "underscore" : "~1.4.4",
+        "commander" : "~1.1.1"
     }
 }

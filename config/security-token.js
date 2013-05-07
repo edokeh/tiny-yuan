@@ -1,1 +1,1 @@
-module.exports = 'aaaaaa';
+module.exports = 'you-should-replace-this-string-for-security';

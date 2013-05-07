@@ -4,6 +4,7 @@ var action = require('./action');
 
 var app = connect.createServer(
     connect.logger('dev'),
+    connect.favicon(),
     connect.static('public'),
     connect.bodyParser(),
     connect.query(),
