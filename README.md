@@ -20,7 +20,7 @@
 
 ## 说明
 
-这只是一个简易的源服务，只提供对 spm info/install/publish/login 这几个命令的支持
+这只是一个简易的源服务，只提供对 spm info/install/publish/login 这几个命令的支持  
 用户信息配置在 config/account.json 文件中
 
     $ spm install gallery/moment
