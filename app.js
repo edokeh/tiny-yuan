@@ -22,6 +22,7 @@ var app = connect.createServer(
 
         router.post('/repository/:family/:name/:version/', action.createModule);
         router.put('/repository/:family/:name/:version/', action.updateModule);
+        router.delete('/repository/:family/:name/:version/', action.deleteModule);
 
         router.post('/account/login', action.login);
     }),

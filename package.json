@@ -1,6 +1,6 @@
 {
     "name" : "tiny-yuan",
-    "version" : "0.0.2",
+    "version" : "0.0.3",
     "description" : "Simple SpmJS Source",
     "keywords" : [
         "seajs",
@@ -17,6 +17,7 @@
         "semver" : "~1.1.4",
         "async" : "~0.2.7",
         "underscore" : "~1.4.4",
-        "commander" : "~1.1.1"
+        "commander" : "~1.1.1",
+        "rimraf":"~2.1.4"
     }
 }

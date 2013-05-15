@@ -90,7 +90,7 @@ module.exports = function updateModule(req, res, next) {
                 projectJson = _.omit(projectJson, 'packages');
                 var project = _.findWhere(data, {name : projectJson.name});
                 if (project) {
-                    _.extend(project, projectJson);
+                    _.extend(project, projectJson);  // findWhere 返回的是引用
                 } else {
                     data.push(projectJson);
                 }
