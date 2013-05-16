@@ -13,6 +13,8 @@ var app = connect.createServer(
         // auth
         router.post('/repository/:family/:name/:version/', action.checkAuth);
         router.put('/repository/:family/:name/:version/', action.checkAuth);
+        router.delete('/repository/:family/:name/:version/', action.checkAuth);
+        router.delete('/repository/:family/:name/', action.checkAuth);
     }),
 
     connectRoute(function (router) {
@@ -23,6 +25,7 @@ var app = connect.createServer(
         router.post('/repository/:family/:name/:version/', action.createModule);
         router.put('/repository/:family/:name/:version/', action.updateModule);
         router.delete('/repository/:family/:name/:version/', action.deleteModule);
+        router.delete('/repository/:family/:name/', action.deleteProject);
 
         router.post('/account/login', action.login);
     }),

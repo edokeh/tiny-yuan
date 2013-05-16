@@ -6,7 +6,7 @@ var semver = require('semver');
 var util = require('../util');
 var rimraf = require('rimraf');
 
-// 更新 module ，通常是处理上传的 tar
+// 删除 module
 module.exports = function deleteModule(req, res, next) {
     var pkgDir = util.getModuleDir(req.params);
     var projectDir = util.getModuleDir(_.omit(req.params, 'version'));
@@ -14,6 +14,16 @@ module.exports = function deleteModule(req, res, next) {
     var familyJsonFile = path.join(util.getModuleDir(_.pick(req.params, 'family')), 'index.json');
 
     async.waterfall([
+        // 检查是否存在
+        function (callback) {
+            fs.exists(pkgDir, function (exists) {
+                if (exists) {
+                    callback();
+                } else {
+                    callback('no such repo!')
+                }
+            });
+        },
 
         // 删除 pkg 文件夹
         function (callback) {
