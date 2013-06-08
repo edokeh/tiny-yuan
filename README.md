@@ -4,6 +4,15 @@
 
 -----
 
+## 公告
+
+2013/6/8  
+
+此项目 **停止维护** ，请改用我所编写的另一个 spm 插件，更加方便
+
+参见 https://github.com/edokeh/spm-tiny-yuan
+
+
 ## Getting Started
 
 代码 clone 下来后，进入目录下执行
