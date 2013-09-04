@@ -8,9 +8,9 @@
 
 2013/6/8  
 
-此项目 **停止维护** ，请改用我所编写的另一个 spm 插件，更加方便
+此项目 **停止维护** ，改为由 spm 插件实现，并已成为 spmjs 官方项目
 
-参见 https://github.com/edokeh/spm-tiny-yuan
+参见 https://github.com/spmjs/spm-yuan
 
 
 ## Getting Started
